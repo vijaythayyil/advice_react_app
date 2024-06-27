@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
 
+import "./App.css";
+
 class App extends React.Component {
   state = { advice: "" };
 
@@ -24,8 +26,10 @@ class App extends React.Component {
   render() {
     const { advice } = this.state;
     return (
-      <div>
-        <h1>{advice}</h1>
+      <div className="App">
+        <div className="card">
+          <h1 className="heading">{advice}</h1>
+        </div>
       </div>
     );
   }
